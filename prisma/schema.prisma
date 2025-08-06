@@ -1,0 +1,44 @@
+generator client {
+    provider = "prisma-client-js"
+    binaryTargets = ["native", "linux-musl-arm64-openssl-3.0.x"]
+    output = "/home/ubuntu/natures_way_soil_website/app/node_modules/.prisma/client"
+}
+
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+model Product {
+    id              String   @id @default(cuid())
+    asin            String   @unique
+    sku             String   @unique
+    title           String
+    shortName       String?
+    sellingPrice    Float?
+    active          Boolean  @default(true)
+    category        String?
+    description     String?
+    features        String?
+    benefits        String?
+    applicationTips String?
+    imageUrl        String?
+    createdAt       DateTime @default(now())
+    updatedAt       DateTime @updatedAt
+
+    @@map("products")
+}
+
+model Contact {
+    id          String   @id @default(cuid())
+    name        String
+    email       String
+    subject     String?
+    message     String
+    formType    String   @default("general")
+    status      String   @default("new")
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+
+    @@map("contacts")
+}

@@ -1,0 +1,514 @@
+
+export interface Product {
+  id: string
+  name: string
+  description: string
+  price: number
+  category: string
+  type: string
+  benefits: string[]
+  usage: string[]
+  applicationRate: string
+  npkRatio?: string
+  size: string
+  ingredients: string
+  seoKeywords: string[]
+  slug: string
+  image: string
+}
+
+export const products: Product[] = [
+  {
+    id: "1",
+    name: "Nature's Way Soil Booster and Loosener",
+    description: "Premium soil conditioner that improves drainage, aeration, and nutrient uptake. This professional-grade soil amendment transforms heavy clay soils and rejuvenates tired garden beds for optimal plant growth.",
+    price: 29.99,
+    category: "Soil Amendments",
+    type: "Soil Conditioner",
+    benefits: [
+      "Improves soil drainage and aeration",
+      "Increases nutrient availability",
+      "Reduces soil compaction",
+      "Enhances root development"
+    ],
+    usage: [
+      "Mix into existing soil before planting",
+      "Apply around established plants",
+      "Use in container gardening",
+      "Perfect for clay soil improvement"
+    ],
+    applicationRate: "Mix 1-2 inches into top 6 inches of soil",
+    size: "32 fl oz",
+    ingredients: "Organic compost, perlite, coco coir, beneficial microorganisms",
+    seoKeywords: ["soil conditioner", "soil amendment", "clay soil improver", "drainage improver"],
+    slug: "soil-booster-and-loosener",
+    image: "/images/products/1.jpg"
+  },
+  {
+    id: "B0DC9CSMWS",
+    name: "Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer – 32 oz",
+    description: "Pet-Safe Grass Repair Spray for Yellow Spots | Odor Eliminator & Soil Reviver for Healthy Green Lawns. This natural-based formula neutralizes dog urine pH and revives grass from unsightly burn spots.",
+    price: 29.99,
+    category: "Specialty Products",
+    type: "Pet Safe Treatment",
+    benefits: [
+      "Neutralizes urine pH",
+      "Revives grass from burn spots",
+      "Removes odor",
+      "Safe for pets, kids & pollinators"
+    ],
+    usage: [
+      "Mix 2 oz concentrate with 1 gallon water",
+      "Saturate affected area thoroughly",
+      "Water again after 24 hours for best results",
+      "Use as preventive treatment"
+    ],
+    applicationRate: "Mix 2 oz concentrate with 1 gallon of water in pump sprayer",
+    size: "32 fl oz (946 mL)",
+    ingredients: "Purified Water, Hydrogen Peroxide (3%), Enzyme Blend (Protease, Amylase), Natural Odor Neutralizer, Humic & Fulvic Acids, Citric Acid",
+    seoKeywords: ["dog urine neutralizer", "pet lawn damage", "brown spot repair", "pet safe lawn treatment"],
+    slug: "dog-urine-neutralizer",
+    image: "/images/products/B0DC9CSMWS.jpg"
+  },
+  {
+    id: "B0FG38YYJ5",
+    name: "Nature's Way Soil Dog Urine Neutralizer & Lawn Revitalizer – 1 Gallon",
+    description: "Pet-Safe Grass Repair for Yellow Spots | Odor Eliminator & Soil Reviver for Healthy Green Lawns. Large 1-gallon size for treating larger areas and multiple applications.",
+    price: 59.99,
+    category: "Specialty Products", 
+    type: "Pet Safe Treatment",
+    benefits: [
+      "Neutralizes Urine pH",
+      "Revives Grass & Soil Microbes",
+      "Removes Odor",
+      "Safe for Pets, Kids & Pollinators"
+    ],
+    usage: [
+      "Attach garden hose tightly to sprayer nozzle",
+      "Turn on water and rotate nozzle to 'ON' position",
+      "Apply evenly across grass areas affected by dog urine",
+      "Turn nozzle to 'OFF' position, then turn off water"
+    ],
+    applicationRate: "Ready to use - attach to garden hose and spray directly",
+    size: "1 GALLON",
+    ingredients: "Water, bio-based acids, soil organisms, aloe vera",
+    seoKeywords: ["dog urine neutralizer", "1 gallon", "pet lawn damage", "large area treatment"],
+    slug: "dog-urine-neutralizer-gallon"
+  },
+  {
+    id: "3",
+    name: "Nature's Way Soil Enhanced Living Compost",
+    description: "Premium living compost enriched with beneficial microorganisms and slow-release nutrients. This biologically active soil amendment improves soil health while providing sustained plant nutrition.",
+    price: 39.99,
+    category: "Soil Amendments",
+    type: "Living Compost",
+    benefits: [
+      "Adds beneficial soil microorganisms",
+      "Provides slow-release nutrition",
+      "Improves soil structure",
+      "Increases water retention"
+    ],
+    usage: [
+      "Mix into garden beds before planting",
+      "Top dress around existing plants",
+      "Use in compost tea preparations",
+      "Ideal for organic container gardening"
+    ],
+    applicationRate: "Mix 2-4 inches into top 8 inches of soil",
+    size: "1 gallon",
+    ingredients: "Aged compost, mycorrhizal fungi, beneficial bacteria, kelp meal, rock dust",
+    seoKeywords: ["living compost", "beneficial microorganisms", "organic soil amendment", "mycorrhizal fungi"],
+    slug: "enhanced-living-compost"
+  },
+  {
+    id: "B0DXP97C6F",
+    name: "Nature's Way Soil Liquid Bone Meal Fertilizer – 32 Ounce",
+    description: "Organic Phosphorus & Calcium for Healthy Roots, Flowers & Fruits – Fast-Absorbing Liquid Plant Food for Vegetables, Flowers, Trees, and Shrubs. Made fresh weekly for maximum potency.",
+    price: 24.99,
+    category: "Liquid Fertilizers",
+    type: "Organic Liquid",
+    benefits: [
+      "Promotes strong root development",
+      "Enhances flowering and fruiting",
+      "Provides readily available phosphorus",
+      "Adds essential calcium"
+    ],
+    usage: [
+      "Apply during planting and early growth",
+      "Use before flowering period",
+      "Excellent for bulbs and perennials",
+      "Ideal for root vegetables"
+    ],
+    applicationRate: "Mix 1-2 tablespoons per gallon of water, apply every 2-3 weeks",
+    npkRatio: "25-5-1",
+    size: "32 fl oz",
+    ingredients: "Bone Meal (Hydrolyzed): 25%, Calcium: 5%, Phosphorus (P2O5): 10%, Water: Balance",
+    seoKeywords: ["liquid bone meal", "phosphorus fertilizer", "root development", "flowering fertilizer"],
+    slug: "liquid-bone-meal-fertilizer"
+  },
+  {
+    id: "B0F9W6R4K9",
+    name: "Nature's Way Soil Liquid Bone Meal Fertilizer – 1 Gallon",
+    description: "Organic Phosphorus & Calcium for Healthy Roots, Flowers & Fruits – Fast-Absorbing Liquid Plant Food for Vegetables, Flowers, Trees, and Shrubs. Large 1-gallon size for gardens and landscaping.",
+    price: 39.99,
+    category: "Liquid Fertilizers",
+    type: "Organic Liquid",
+    benefits: [
+      "Promotes strong root development",
+      "Enhances flowering and fruiting", 
+      "Provides readily available phosphorus",
+      "Adds essential calcium"
+    ],
+    usage: [
+      "Apply during planting and early growth",
+      "Use before flowering period",
+      "Excellent for bulbs and perennials",
+      "Ideal for root vegetables"
+    ],
+    applicationRate: "Mix 1-2 tablespoons per gallon of water, apply every 2-3 weeks",
+    npkRatio: "25-5-1",
+    size: "1 Gallon",
+    ingredients: "Bone Meal (Hydrolyzed): 25%, Calcium: 5%, Phosphorus (P2O5): 10%, Water: Balance",
+    seoKeywords: ["liquid bone meal", "1 gallon", "phosphorus fertilizer", "root development"],
+    slug: "liquid-bone-meal-fertilizer-gallon"
+  },
+  {
+    id: "B0FF98QKY7",
+    name: "Nature's Way Soil® Liquid Biochar with Kelp, Humic & Fulvic Acid – 1 Gallon",
+    description: "Organic Soil Conditioner for Plants, Gardens & Lawns – Boost Microbes & Nutrient Retention. Contains Kelp, Humic & Fulvic Acid with Activated Biochar for superior soil health.",
+    price: 89.99,
+    category: "Soil Conditioners",
+    type: "Biochar Conditioner",
+    benefits: [
+      "Organic Ingredients",
+      "Contains Kelp, Humic & Fulvic Acid",
+      "Activated Biochar",
+      "Made Fresh Weekly • Shelf Life: One Year"
+    ],
+    usage: [
+      "Shake well before use",
+      "Apply at rate f 2-4 oz per gallon of water every 4-6 weeks",
+      "Mix solution thoroughly before application",
+      "Suitable for gardens, lawns, composting, and landscape plantings"
+    ],
+    applicationRate: "Shake well before use. Apply at a rate f 2-4 oz per gallon of water every 4-6 weeks, or as needed",
+    size: "1 GALLON",
+    ingredients: "Water, Activated Biochar, Cold-Processed Kelp Extract, Liquid Humic Acid, Liquid Fulvic Acid, Organic Aloe Vera, Organic Molasses, Calcium Sorbate, Citric Acid",
+    seoKeywords: ["liquid biochar", "soil conditioner", "humic acid", "kelp extract"],
+    slug: "liquid-biochar-humates"
+  },
+  {
+    id: "B0FFZRM6BD",
+    name: "Nature's Way Soil® Liquid Humic & Fulvic Acid – 32 oz",
+    description: "Soil Conditioner with Organic Kelp – Boosts Root Growth, Water Retention & Microbial Activity – Natural Lawn & Garden Supplement – Pet-Safe. Improves nutrient uptake and revitalizes soil biology.",
+    price: 19.99,
+    category: "Soil Conditioners",
+    type: "Liquid Conditioner",
+    benefits: [
+      "Improves nutrient uptake",
+      "Revitalizes soil biology", 
+      "Builds stronger root systems",
+      "Organic & pet-safe"
+    ],
+    usage: [
+      "Mix with water and apply to lawns, plants & gardens",
+      "Use rates: Gardens 2 fl oz per gallon of water",
+      "Lawns: 1/2 fl oz per gallon of water",
+      "Indoor plants: 0.5-1 oz per gallon"
+    ],
+    applicationRate: "Mix 2 fl oz per gallon of water; Lawn 1/2 fl oz per gallon of water",
+    size: "32 oz (946 mL)",
+    ingredients: "Humic Acids 6.0%. Derived from Leonardite.",
+    seoKeywords: ["humic acid", "fulvic acid", "nutrient uptake", "soil conditioner"],
+    slug: "liquid-humic-fulvic-acid"
+  },
+  {
+    id: "B0F9V4HQNK",
+    name: "Nature's Way Soil Liquid Humic & Fulvic Acid with Organic Kelp – 1 Gallon",
+    description: "Concentrate, Natural Soil Conditioner, Plant Growth Stimulator. Liquid humic and fulvic acids with organic kelp for enhanced plant nutrition and soil health.",
+    price: 39.99,
+    category: "Soil Conditioners",
+    type: "Liquid Conditioner",
+    benefits: [
+      "Natural Soil Conditioner",
+      "Stimulates Plant Growth & Nutrient Uptake", 
+      "Improves Root Development",
+      "Contains organic kelp"
+    ],
+    usage: [
+      "Mix with water and apply to lawns, plants & gardens",
+      "Suitable for gardens, lawns, composting, and landscape plantings",
+      "Feed lawn or garden monthly during growing season",
+      "Use mixed solution to water indoor plants"
+    ],
+    applicationRate: "Mix 2 fl oz per gallon of water; Lawn 1/2 fl oz per gallon of water",
+    size: "1 Gallon",
+    ingredients: "Concentrated Humic and Fulvic Acids with Organic Kelp Extract",
+    seoKeywords: ["humic acid", "fulvic acid", "1 gallon", "soil conditioner", "plant growth stimulator"],
+    slug: "liquid-humic-fulvic-acid-gallon"
+  },
+  {
+    id: "B0FGWSKGCY",
+    name: "Nature's Way Soil® Seaweed & Humic Acid Lawn Treatment – 32 oz",
+    description: "Organic Super Seaweed Humic Acid Blend - Liquid Sea Kelp for Grass and Plants. Natural Lawn & Garden Concentrate with Soil Hume for Simple Grow Solutions. Made Fresh Weekly with Organic Ingredients Safe for Pets.",
+    price: 22.99,
+    category: "Liquid Fertilizers",
+    type: "Organic Seaweed",
+    benefits: [
+      "Soil Hume - Simple Grow Solutions",
+      "Natural Lawn & Garden Concentrate", 
+      "Use with Fertilizer Program",
+      "Made Fresh Weekly - Organic Ingredients Safe for Pets"
+    ],
+    usage: [
+      "Shake Well Before Use",
+      "Plants: Mix 2-4 Tbs in gallon sprayer, apply every 1-2 weeks",
+      "Lawns: Mix 6-8 oz/gal water, cover 1,000 sq ft",
+      "Soil: Mix 6 oz in 1-2 gal water, drench soil before planting"
+    ],
+    applicationRate: "Plants: 2-4 Tbs per gallon; Lawns: 6-8 oz per gallon; Soil: 6 oz in 1-2 gal water",
+    size: "32 ounces",
+    ingredients: "Kelp Extract (Ascophyllum nodosum), Humic Acid derived from Leonardite, Total Nitrogen (N), Soluble Potash (K2O): 0.2%, Soluble organic nitrogen: 0.2%, Water-soluble potassium: 7.0%",
+    seoKeywords: ["seaweed fertilizer", "humic acid", "kelp fertilizer", "lawn treatment"],
+    slug: "seaweed-humic-acid-lawn-treatment"
+  },
+  {
+    id: "7",
+    name: "Nature's Way Soil Orchid & African Violet Potting Mix",
+    description: "Specialized potting mix formulated for orchids, African violets, and other epiphytic plants. Provides excellent drainage while maintaining proper moisture levels for delicate root systems.",
+    price: 29.99,
+    category: "Potting Mixes",
+    type: "Specialty Mix",
+    benefits: [
+      "Perfect drainage for sensitive roots",
+      "Maintains optimal moisture levels",
+      "pH balanced for flowering plants",
+      "Contains bark and perlite blend"
+    ],
+    usage: [
+      "Ideal for orchids and African violets",
+      "Perfect for repotting houseplants",
+      "Use for epiphytic plant varieties",
+      "Excellent for container gardening"
+    ],
+    applicationRate: "Use as primary potting medium, refresh annually",
+    size: "8 quart bag",
+    ingredients: "Orchid bark, perlite, sphagnum moss, coconut husk chips, trace minerals",
+    seoKeywords: ["orchid potting mix", "african violet soil", "epiphytic plant mix", "specialty potting mix"],
+    slug: "orchid-african-violet-potting-mix"
+  },
+  {
+    id: "8",
+    name: "Nature's Way Soil Organic All-Purpose Fertilizer",
+    description: "Balanced organic liquid fertilizer perfect for all garden plants. This versatile formula provides complete nutrition for vegetables, flowers, herbs, and houseplants throughout the growing season.",
+    price: 22.99,
+    category: "Liquid Fertilizers",
+    type: "All-Purpose Organic",
+    benefits: [
+      "Complete balanced nutrition",
+      "Safe for all plant types",
+      "Fast-acting liquid formula",
+      "Promotes healthy growth"
+    ],
+    usage: [
+      "Use on vegetables, flowers, and herbs",
+      "Perfect for container gardening",
+      "Apply throughout growing season",
+      "Safe for edible plants"
+    ],
+    applicationRate: "2 tablespoons per gallon of water, apply every 2-3 weeks",
+    npkRatio: "4-4-4",
+    size: "32 fl oz",
+    ingredients: "Fish emulsion, kelp meal, molasses, organic acids, trace minerals",
+    seoKeywords: ["all purpose fertilizer", "organic liquid fertilizer", "balanced plant food", "general purpose fertilizer"],
+    slug: "organic-all-purpose-fertilizer"
+  },
+  {
+    id: "9",
+    name: "Nature's Way Soil Organic House Plant Fertilizer",
+    description: "Gentle organic fertilizer specially formulated for indoor plants. Provides balanced nutrition without burning sensitive houseplant roots, promoting lush foliage and vibrant growth.",
+    price: 18.99,
+    category: "Liquid Fertilizers",
+    type: "Houseplant Specific",
+    benefits: [
+      "Gentle formula for sensitive plants",
+      "Promotes lush foliage growth",
+      "Won't burn plant roots",
+      "Perfect for all houseplants"
+    ],
+    usage: [
+      "Ideal for all indoor plants",
+      "Use year-round for houseplants",
+      "Perfect for tropical plants",
+      "Safe for frequent application"
+    ],
+    applicationRate: "1 tablespoon per gallon of water, apply monthly",
+    npkRatio: "3-1-2",
+    size: "16 fl oz",
+    ingredients: "Gentle fish emulsion, seaweed extract, organic acids, micronutrients",
+    seoKeywords: ["houseplant fertilizer", "indoor plant food", "tropical plant fertilizer", "gentle plant fertilizer"],
+    slug: "organic-house-plant-fertilizer"
+  },
+  {
+    id: "10",
+    name: "Nature's Way Soil Organic Hydroponic Fertilizer Concentrate",
+    description: "Concentrated organic hydroponic nutrient solution for soilless growing systems. Provides complete nutrition for hydroponic vegetables, herbs, and flowering plants in all growth stages.",
+    price: 25.99,
+    category: "Hydroponic Nutrients",
+    type: "Concentrate",
+    benefits: [
+      "Complete hydroponic nutrition",
+      "Concentrated formula",
+      "Suitable for all growth stages",
+      "Compatible with all systems"
+    ],
+    usage: [
+      "Perfect for hydroponic systems",
+      "Use in NFT, DWC, and aeroponic setups",
+      "Ideal for soilless container growing",
+      "Suitable for commercial operations"
+    ],
+    applicationRate: "1-2 teaspoons per gallon of water, adjust EC to 1.2-2.0",
+    npkRatio: "5-5-5",
+    size: "32 fl oz concentrate",
+    ingredients: "Organic nutrient salts, kelp extract, amino acids, chelated micronutrients",
+    seoKeywords: ["hydroponic fertilizer", "soilless nutrients", "hydroponic nutrients", "concentrated plant food"],
+    slug: "organic-hydroponic-fertilizer-concentrate"
+  },
+  {
+    id: "11",
+    name: "Nature's Way Soil Organic Liquid Fertilizer for Garden and House Plants",
+    description: "Premium organic liquid fertilizer suitable for both indoor and outdoor plants. This versatile formula combines fast-acting nutrients with organic matter for sustained plant health and growth.",
+    price: 20.99,
+    category: "Liquid Fertilizers",
+    type: "Multi-Purpose Organic",
+    benefits: [
+      "Works for indoor and outdoor plants",
+      "Fast-acting with long-term benefits",
+      "Improves soil biology",
+      "Safe for organic gardening"
+    ],
+    usage: [
+      "Use on gardens and houseplants",
+      "Apply during active growing season",
+      "Perfect for container gardens",
+      "Ideal for organic certification"
+    ],
+    applicationRate: "2 tablespoons per gallon of water, apply every 3-4 weeks",
+    npkRatio: "2-3-1",
+    size: "32 fl oz",
+    ingredients: "Organic fish hydrolysate, seaweed meal, molasses, beneficial microbes",
+    seoKeywords: ["organic liquid fertilizer", "garden plant fertilizer", "indoor outdoor fertilizer", "organic plant food"],
+    slug: "organic-liquid-fertilizer-garden-house-plants"
+  },
+  {
+    id: "12",
+    name: "Nature's Way Soil Organic Tomato Liquid Fertilizer",
+    description: "Specialized organic fertilizer formulated for tomatoes and fruiting vegetables. High in potassium and calcium to prevent blossom end rot while promoting abundant fruit production.",
+    price: 29.99,
+    category: "Liquid Fertilizers",
+    type: "Vegetable Specific",
+    benefits: [
+      "Prevents blossom end rot",
+      "Promotes heavy fruit production",
+      "Strengthens plant structure",
+      "Improves fruit quality"
+    ],
+    usage: [
+      "Perfect for tomatoes and peppers",
+      "Use on all fruiting vegetables",
+      "Apply during fruiting season",
+      "Excellent for container tomatoes"
+    ],
+    applicationRate: "3 tablespoons per gallon of water, apply weekly during fruiting",
+    npkRatio: "4-6-8",
+    size: "32 fl oz",
+    ingredients: "Organic tomato meal, bone meal, kelp, calcium carbonate, potassium sulfate",
+    seoKeywords: ["tomato fertilizer", "vegetable fertilizer", "fruiting plant fertilizer", "blossom end rot prevention"],
+    slug: "organic-tomato-liquid-fertilizer"
+  },
+  {
+    id: "13",
+    name: "Nature's Way Soil Organic Vegetable Fertilizer",
+    description: "Complete organic fertilizer designed for vegetable gardens. Provides balanced nutrition with emphasis on nitrogen for leafy growth and phosphorus for root development and fruit production.",
+    price: 26.99,
+    category: "Liquid Fertilizers",
+    type: "Vegetable Specific",
+    benefits: [
+      "Complete vegetable nutrition",
+      "Promotes leafy and root growth",
+      "Increases harvest yields",
+      "Safe for edible crops"
+    ],
+    usage: [
+      "Ideal for all vegetable gardens",
+      "Use throughout growing season",
+      "Perfect for raised beds",
+      "Excellent for succession planting"
+    ],
+    applicationRate: "2-3 tablespoons per gallon of water, apply every 2-3 weeks",
+    npkRatio: "5-3-4",
+    size: "32 fl oz",
+    ingredients: "Fish meal, bone meal, kelp meal, rock phosphate, potassium sulfate",
+    seoKeywords: ["vegetable fertilizer", "organic vegetable food", "garden vegetable nutrients", "edible plant fertilizer"],
+    slug: "organic-vegetable-fertilizer"
+  },
+  {
+    id: "14",
+    name: "Nature's Way Soil Premium Organic Potting Mix",
+    description: "Premium potting mix crafted from the finest organic ingredients. Perfect drainage and water retention with added nutrients for container gardening, raised beds, and indoor plants.",
+    price: 24.99,
+    category: "Potting Mixes",
+    type: "Premium Mix",
+    benefits: [
+      "Superior drainage and retention",
+      "Added organic nutrients",
+      "Perfect for containers",
+      "Promotes healthy root growth"
+    ],
+    usage: [
+      "Ideal for container gardening",
+      "Perfect for raised beds",
+      "Use for indoor plant repotting",
+      "Excellent for starting seeds"
+    ],
+    applicationRate: "Use as primary growing medium, amend annually",
+    size: "2 cubic foot bag",
+    ingredients: "Composted bark, peat moss, perlite, vermiculite, organic compost, slow-release fertilizer",
+    seoKeywords: ["premium potting mix", "organic potting soil", "container gardening mix", "raised bed soil"],
+    slug: "premium-organic-potting-mix"
+  }
+]
+
+export function getProductBySlug(slug: string): Product | undefined {
+  return products.find(product => product.slug === slug)
+}
+
+export function getProductsByCategory(category: string): Product[] {
+  return products.filter(product => product.category === category)
+}
+
+export function getFeaturedProducts(): Product[] {
+  return products.slice(0, 6)
+}
+
+export function searchProducts(query: string): Product[] {
+  const searchTerm = query.toLowerCase()
+  return products.filter(product => 
+    product.name.toLowerCase().includes(searchTerm) ||
+    product.description.toLowerCase().includes(searchTerm) ||
+    product.category.toLowerCase().includes(searchTerm) ||
+    product.benefits.some(benefit => benefit.toLowerCase().includes(searchTerm)) ||
+    product.seoKeywords.some(keyword => keyword.toLowerCase().includes(searchTerm))
+  )
+}
+
+export const categories = [
+  "All Products",
+  "Liquid Fertilizers", 
+  "Soil Amendments",
+  "Potting Mixes",
+  "Hydroponic Nutrients",
+  "Soil Conditioners",
+  "Specialty Products"
+]
