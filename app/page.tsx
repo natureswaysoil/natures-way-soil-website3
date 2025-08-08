@@ -1,18 +1,11 @@
-
-import { Hero } from '@/components/hero'
-import { FeaturedProducts } from '@/components/featured-products'
-import { Benefits } from '@/components/benefits'
-import { FAQ } from '@/components/faq'
-import { CTA } from '@/components/cta'
-
 export default function HomePage() {
   return (
-    <div className="flex flex-col">
-      <Hero />
-      <FeaturedProducts />
-      <Benefits />
-      <FAQ />
-      <CTA />
-    </div>
-  )
+    <main style={{ padding: "2rem", textAlign: "center" }}>
+      <h1>Welcome to Nature's Way Soil</h1>
+      <p>This site is deployed and working!</p>
+      <p>
+        If you expected to see more content, please check that your components <code>Hero</code>, <code>FeaturedProducts</code>, <code>Benefits</code>, <code>FAQ</code>, and <code>CTA</code> exist in <code>/components</code>.
+      </p>
+    </main>
+  );
 }
