@@ -1,0 +1,72 @@
+# === CONFIG: set your local repo path ===
+$RepoPath = "C:\path\to\your\repo\natureswaysoil-site"   # CHANGE THIS
+
+# === Go to repo ===
+Set-Location $RepoPath
+
+# === Ensure app/page.tsx exists with a minimal homepage ===
+$AppDir = Join-Path $RepoPath "app"
+$HomePage = Join-Path $AppDir "page.tsx"
+
+if (!(Test-Path $AppDir)) {
+  New-Item -ItemType Directory -Path $AppDir | Out-Null
+}
+
+$homeContent = @"
+// app/page.tsx
+export default function Home() {
+  return (
+    <main style={{ padding: 24 }}>
+      <h1>Natures Way Soil</h1>
+      <p>Site is live.</p>
+    </main>
+  );
+}
+"@
+
+if (!(Test-Path $HomePage)) {
+  $homeContent | Set-Content -NoNewline $HomePage -Encoding UTF8
+  Write-Host "Created app/page.tsx"
+} else {
+  Write-Host "app/page.tsx already exists; leaving as-is"
+}
+
+# === Commit and push (to main) ===
+git add app/page.tsx
+# Continue even if nothing changed
+git commit -m "Ensure homepage exists for production" 2>$null
+git push
+
+# === Install Vercel CLI if needed ===
+if (-not (Get-Command vercel -ErrorAction SilentlyContinue)) {
+  npm i -g vercel
+}
+
+# === One-time login (will open a browser if not logged in yet) ===
+vercel login
+
+# === Link to the existing Vercel project if not already linked ===
+# If already linked, this will detect and confirm. Otherwise select your project.
+vercel link
+
+# === Deploy to PRODUCTION right now ===
+vercel --prod
+
+# === Quick verification of your live domains ===
+$domains = @(
+  "https://natureswaysoil.com",
+  "https://www.natureswaysoil.com",
+  "https://natureswaysoil-site-n4yztqv3l-james-projects-5e9a58a0.vercel.app"
+)
+
+foreach ($d in $domains) {
+  try {
+    $resp = Invoke-WebRequest -Uri $d -MaximumRedirection 5 -ErrorAction Stop
+    Write-Host "`n[$d] -> Status:" $resp.StatusCode
+    if ($resp.BaseResponse.ResponseUri) {
+      Write-Host "Final URL:" $resp.BaseResponse.ResponseUri.AbsoluteUri
+    }
+  } catch {
+    Write-Host "`n[$d] -> Error:" $_.Exception.Message
+  }
+}
